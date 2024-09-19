@@ -6,7 +6,7 @@ body {
 }
 
 .header {
-    background: var(--header-color);
+    background: var(--primary-color);
     height: var(--header-height);
     font-family: var(--header-font-family);
     color: white;
@@ -59,13 +59,13 @@ body {
     width: 20%;
     height: 50px;
     border: none;
-    background-color: var(--btn-color);
+    background-color: var(--secondary-color);
     color: white;
     font-size: 1.2rem;
     cursor: pointer;
     outline: none;
     border-radius: 10px;
-    box-shadow: 0px 5px 20px var(--btn-color);
+    box-shadow: 0px 5px 20px var(--secondary-color);
     backdrop-filter: blur(10px);
 }
 .addTaskContent button:hover{
@@ -105,7 +105,7 @@ body {
 }
 .count{
     font-size: 20px;
-    color: var(--btn-color);
+    color: var(--secondary-color);
     font-weight: 600; 
 }
 .task{
@@ -155,4 +155,47 @@ body {
     height: 20px;
     cursor: pointer;
     align-self: center;
+  }
+
+
+
+  .loading {
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  .spinner {
+    border: 8px solid #f3f3f3; /* Light grey */
+    border-top: 8px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    align-self: center;
+    margin: auto;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+
+  @media screen and (max-width: 768px){
+    .container{
+        flex-direction: column;
+    }
+    .sideContainer{
+        flex-direction: row;
+        width: 100%;
+        margin: 0;
+        justify-content: center;
+    }
+    .countContainer{
+        margin: 10px 7px;
+    }
+    .taskList{
+        width: 100%;
+    }
+    
   }

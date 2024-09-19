@@ -1,9 +1,9 @@
 :root{
-    --header-color: linear-gradient(to right, rgb(95,68,130), rgb(145, 108, 213));
+    --primary-color: linear-gradient(to right, rgb(95,68,130), rgb(145, 108, 213));
     --header-height: 25vh;
     --header-font-family: 'Poppins', sans-serif;
     --addTask-height: 200px;
-    --btn-color: #e33d2b;
+    --secondary-color: #e33d2b;
     --task-list-width: 80%;
     --main-font-family: 'Poppins', sans-serif;
     --task-width: 70%;
