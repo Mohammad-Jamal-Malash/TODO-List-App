@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="global-vars.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <title>TODO List App</title>
+  </head>
+  <body>
+    <div class="header">TODO List</div>
+
+    <div class="addTask addTaskContent">
+      <input type="text" id="task" placeholder="Enter task here" />
+      <button id="add">Add</button>
+    </div>
+    <div class="container">
+      <div class="taskList" id="taskList">
+        <li class="task">
+          <input type="checkbox" class="taskCheckbox" id="status" />
+          <span class="taskText" contenteditable="false">some Task</span>
+          <button class="delete-btn icon">
+            <i class="fas fa-trash"></i>
+          </button>
+          <button class="edit-btn icon">
+            <i class="fas fa-edit"></i>
+          </button>
+        </li>
+      </div>
+      <div class="sideContainer">
+        <div class="countContainer" id="allTasks">
+          <div class="count">Total</div>
+          <div class="count" id="totalTasks"></div>
+        </div>
+        <div class="countContainer" id="completedTasks">
+          <div class="count">Completed</div>
+          <div class="count" id="completedTasksCount"></div>
+        </div>
+        <div class="countContainer" id="pendingTasks">
+          <div class="count">Pending</div>
+          <div class="count" id="pendingTasksCount"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
