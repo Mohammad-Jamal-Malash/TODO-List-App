@@ -287,3 +287,14 @@ body {
 .no:hover{
     background: linear-gradient(to right, red ,rgb(227, 131, 131));
 }
+
+#search-task{
+    width: calc(var(--task-width) + 30px);
+    background: white;
+    padding: 15px;
+    align-self: center;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
+    border: none;
+    font-size: 18px;
+    outline: none;
+}
