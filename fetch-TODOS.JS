@@ -7,8 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
      // if exists, display the tasks
     if (cachedTasks) {
-        let t = JSON.parse(cachedTasks);
-        displayTasks(t);
+        displayTasks(JSON.parse(cachedTasks));
         return;
     }
     // by using cashed tasks, we can provide a more responsive experience to the user
