@@ -245,3 +245,45 @@ body {
 .hidden {
     display: none;
 }
+
+.deleteMsgContainer{
+    background-color: white;
+    width: 350px;
+    height: 150px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.btnContainer{
+    align-self: flex-end;
+    margin: 8px;
+}
+.deleteMsgContainer p{
+   font-size: 20px;
+   margin: 10px;
+}
+.btn{
+    width: 70px;
+    height: 30px;
+    border: none;
+    color: white;
+    font-weight: 600;
+    font-size: 15px;
+    border-radius: 3px;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.8);
+}
+.yes{
+    background-color: green;
+}
+.no{
+    background-color: red;
+}
+
+.yes:hover{
+    background: linear-gradient(to right, green, rgb(93, 207, 105));
+}
+.no:hover{
+    background: linear-gradient(to right, red ,rgb(227, 131, 131));
+}

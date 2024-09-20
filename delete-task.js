@@ -1,5 +1,9 @@
 const deleteTask = async (taskId) => {
     try {
+        // Delete TODO confirmation.
+        let confirmDelete =  await deleteRespnse();
+        if(!confirmDelete) return;
+
         // get all tasks from local storage
         let tasks = JSON.parse(localStorage.getItem("todos")) || [];
         // delete the task with the given taskId from the tasks array
