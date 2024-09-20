@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', function () {
             let tasks = JSON.parse(localStorage.getItem('todos')) || [];
             // Create a new task object
             const newTask = {
-                id: tasks.length + 1,
+                id: (tasks.length > 0 ? tasks[tasks.length -1].id+1 :1) ,
                 todo: data.todo,
                 completed: data.completed,
                 userId: data.userId,

@@ -71,6 +71,8 @@ document.addEventListener("DOMContentLoaded", () => {
             // 3. Edit task
             taskItem.querySelector('.edit-btn').addEventListener('click', () => editTask(task.id));
 
+            if (task.completed)
+                taskItem.querySelector('.taskText').style.textDecoration = 'line-through';
             taskList.appendChild(taskItem);
         });
     };
