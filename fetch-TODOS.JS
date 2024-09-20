@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
             // Save tasks to local storage
             localStorage.setItem("todos", JSON.stringify(data.todos));
             // Clear loading indicator and display tasks
-            taskList.innerHTML = '';
+            taskList.innerHTML = '<input type="search" id = "search-task" placeholder="Search Task ..."/>';
             displayTasks(data.todos);
         } catch (error) {
             console.error("Error fetching tasks:", error);
