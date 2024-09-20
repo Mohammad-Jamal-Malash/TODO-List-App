@@ -1,6 +1,9 @@
-body {
+*{
     margin: 0;
     padding: 0;
+}
+
+body {
     overflow: hidden;
     font-family: var(--main-font-family);
 }
@@ -52,7 +55,6 @@ body {
     border: none;
     border-bottom: 1px solid #916cd5;
     font-size: 1.2rem;
-    margin: 10px 0;
     outline: none;
 }
 .addTaskContent button{
@@ -174,6 +176,10 @@ body {
     align-self: center;
     margin: auto;
   }
+  .spinnerBtn{
+    width: 20px;
+    height: 20px;
+  }
   
   @keyframes spin {
     0% { transform: rotate(0deg); }
@@ -199,3 +205,27 @@ body {
     }
     
   }
+
+  /* to make a smooth show and diappear*/
+  .showWarning {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+}
+
+.showWarning.active {
+    max-height: 30px; 
+    opacity: 1;
+}
+
+@keyframes show {
+    0% {
+        max-height: 0;
+        opacity: 0;
+    }
+    100% {
+        max-height: 30px; 
+        opacity: 1;
+    }
+}
