@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Check if the TODOS are already in the local storage
     const cachedTasks = localStorage.getItem("todos");
 
-     // if exists, display the tasks
+    // if exists, display the tasks
     if (cachedTasks) {
         displayTasks(JSON.parse(cachedTasks));
         return;
@@ -42,13 +42,13 @@ document.addEventListener("DOMContentLoaded", () => {
     fetchTasks();
 });
 
-    // Function to display tasks in the taskList
-    const displayTasks = (tasks) => {
-        tasks.forEach(task => {
-            const taskItem = document.createElement("li");
-            taskItem.className = "task";
-            taskItem.id = `task-${task.id}`;
-            taskItem.innerHTML = `
+// Function to display tasks in the taskList
+const displayTasks = (tasks) => {
+    tasks.forEach(task => {
+        const taskItem = document.createElement("li");
+        taskItem.className = "task";
+        taskItem.id = `task-${task.id}`;
+        taskItem.innerHTML = `
             <input type="checkbox" class="taskCheckbox" id="status-${task.id}" ${task.completed ? 'checked' : ''} />
             <span class="taskText" contenteditable="false">${task.todo}</span>
             <button class="delete-btn icon">
@@ -59,20 +59,20 @@ document.addEventListener("DOMContentLoaded", () => {
             </button>
           `;
 
-            // we will attach event listeners for the following actions
-            // 1. Toggle task status
-            // 2. Delete task
-            // 3. Edit task
+        // we will attach event listeners for the following actions
+        // 1. Toggle task status
+        // 2. Delete task
+        // 3. Edit task
 
-            // 1. Toggle task status
-            taskItem.querySelector('.taskCheckbox').addEventListener('change', () => toggleStatus(task.id));
-            // 2. Delete task
-            taskItem.querySelector('.delete-btn').addEventListener('click', () => deleteTask(task.id));
-            // 3. Edit task
-            taskItem.querySelector('.edit-btn').addEventListener('click', () => editTask(task.id));
+        // 1. Toggle task status
+        taskItem.querySelector('.taskCheckbox').addEventListener('change', () => toggleStatus(task.id));
+        // 2. Delete task
+        taskItem.querySelector('.delete-btn').addEventListener('click', () => deleteTask(task.id));
+        // 3. Edit task
+        taskItem.querySelector('.edit-btn').addEventListener('click', () => editTask(task.id));
 
-            if (task.completed)
-                taskItem.querySelector('.taskText').style.textDecoration = 'line-through';
-            taskList.appendChild(taskItem);
-        });
-    };
+        if (task.completed)
+            taskItem.querySelector('.taskText').style.textDecoration = 'line-through';
+        taskList.appendChild(taskItem);
+    });
+};

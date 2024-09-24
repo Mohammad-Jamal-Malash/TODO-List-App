@@ -160,6 +160,7 @@ body {
     cursor: pointer;
     float: left;
     margin-right: 10px;
+    accent-color: green;
   }
   .loading {
     text-align: center;

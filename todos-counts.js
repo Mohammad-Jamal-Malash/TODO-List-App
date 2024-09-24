@@ -11,9 +11,7 @@ const pendingTODOs = () => {
     let pending = TODOs.filter(todo => todo.completed == false);
     document.getElementById("pendingTasksCount").innerHTML = pending.length;
 }
-totalTODOs();
-completedTODOs();
-pendingTODOs();
+
 
 // adding an event that cheaks if any thing changed in the dom and
 // re-calculate the values:

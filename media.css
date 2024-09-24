@@ -1,6 +1,7 @@
-@media screen and (max-width: 768px){
+@media screen and (max-width: 1024px){
     .container{
         flex-direction: column;
+        overflow-y: auto;
     }
     .sideContainer{
         flex-direction: row;
@@ -14,5 +15,6 @@
     .taskList{
         width: 100%;
     }
+    
     
   }
