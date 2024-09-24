@@ -11,11 +11,9 @@ document.addEventListener('DOMContentLoaded', function () {
             if (!existingWarning) {
                 let warning = document.createElement('span');
                 warning.id = "warningMessage";
-                warning.style.color = 'red';
-                warning.style.fontSize = '12px';
-                warning.style.alignSelf = "flex-start";
+                warning.classList.add("warningMessageStyle");
                 // this class is for more smother ui for the warnning msg
-                warning.className = "showWarning";
+                warning.classList.add("showWarning");
 
 
                 // to put the warning exactly under the input feild

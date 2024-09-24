@@ -2,9 +2,9 @@
     --primary-color: linear-gradient(to right, rgb(95,68,130), rgb(145, 108, 213));
     --header-height: 25vh;
     --header-font-family: 'Poppins', sans-serif;
-    --addTask-height: 200px;
+    --addTask-height: 120px;
     --secondary-color: #e33d2b;
-    --task-list-width: 80%;
+    --task-list-width: 70%;
     --main-font-family: 'Poppins', sans-serif;
-    --task-width: 70%;
+    --task-width: 100%;
 }
