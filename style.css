@@ -28,6 +28,7 @@ body {
     background: #f1f1f1;
     position: static; /* Changed from absolute */
     display: flex;
+    justify-content: center;
 }
 
 .addTask {
@@ -88,7 +89,6 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
 }
 .countContainer{
     background-color: white;
@@ -102,6 +102,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+    margin: 15px;
 }
 .count{
     font-size: 20px;
@@ -157,7 +158,8 @@ body {
     width: 20px;
     height: 20px;
     cursor: pointer;
-    align-self: center;
+    float: left;
+    margin-right: 10px;
   }
   .loading {
     text-align: center;
@@ -183,27 +185,6 @@ body {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
   }
-  
-
-  @media screen and (max-width: 768px){
-    .container{
-        flex-direction: column;
-    }
-    .sideContainer{
-        flex-direction: row;
-        width: 100%;
-        margin: 0;
-        justify-content: center;
-    }
-    .countContainer{
-        margin: 10px 7px;
-    }
-    .taskList{
-        width: 100%;
-    }
-    
-  }
-
   /* to make a smooth show and diappear*/
   .showWarning {
     max-height: 0;
